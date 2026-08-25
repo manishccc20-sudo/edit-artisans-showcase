@@ -18,7 +18,7 @@ export function Hero() {
       <motion.div style={{ y }} className="absolute inset-0 -z-10">
         <img
           src={media.heroImage}
-          alt="Editing suite lit by a colour-graded timeline"
+          alt="Cinematic mountain ridge at blue hour"
           width={1920}
           height={1088}
           className="h-full w-full scale-105 object-cover opacity-90"
