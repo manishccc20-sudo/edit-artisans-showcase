@@ -3,13 +3,18 @@ import { Play } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { media } from "@/data/site";
 
+const isGoogleDriveEmbed = (url: string) =>
+  /drive\.google\.com\/file\/d\/[^/]+\/preview/i.test(url);
+
 export function Showreel() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
   const play = () => {
     setPlaying(true);
-    requestAnimationFrame(() => void videoRef.current?.play());
+    if (!isGoogleDriveEmbed(media.showreel.src)) {
+      requestAnimationFrame(() => void videoRef.current?.play());
+    }
   };
 
   return (
@@ -28,15 +33,25 @@ export function Showreel() {
       <Reveal delay={0.15} className="mt-12 md:mt-16">
         <div className="cine-vignette relative overflow-hidden rounded-xl border border-border bg-surface">
           {playing ? (
-            <video
-              ref={videoRef}
-              className="aspect-video w-full"
-              src={media.showreel.src}
-              poster={media.showreel.poster}
-              controls
-              playsInline
-              preload="metadata"
-            />
+            isGoogleDriveEmbed(media.showreel.src) ? (
+              <iframe
+                title="Showreel"
+                src={media.showreel.src}
+                className="aspect-video w-full rounded-xl"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            ) : (
+              <video
+                ref={videoRef}
+                className="aspect-video w-full"
+                src={media.showreel.src}
+                poster={media.showreel.poster}
+                controls
+                playsInline
+                preload="metadata"
+              />
+            )
           ) : (
             <button
               type="button"

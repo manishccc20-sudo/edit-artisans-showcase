@@ -15,9 +15,13 @@ import workWedding from "@/assets/work-wedding.jpg";
 import workProduct from "@/assets/work-product.jpg";
 import workCinematic from "@/assets/work-cinematic.jpg";
 
-/** Placeholder video — swap for your own showreel / project files or an mp4 URL. */
+/** Placeholder for project videos — swap for your own files or mp4 URLs. */
 const PLACEHOLDER_VIDEO =
   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
+
+/** Google Drive showreel — swap the file ID for your own share link. */
+const SHOWREEL_VIDEO =
+  "https://drive.google.com/file/d/1HaZ0Hh01bdxE7b_NQlYVvHhRq_Ouo0qZ/preview";
 
 export const contact = {
   email: "hello@manish.video",
@@ -30,7 +34,7 @@ export const media = {
   portrait,
   showreel: {
     poster: showreelPoster,
-    src: PLACEHOLDER_VIDEO,
+    src: SHOWREEL_VIDEO,
   },
 };
 
