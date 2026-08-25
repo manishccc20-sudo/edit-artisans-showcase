@@ -15,7 +15,7 @@ export function Hero() {
       ref={ref}
       className="cine-vignette relative flex min-h-[100svh] items-end overflow-hidden"
     >
-      <motion.div style={{ y }} className="absolute inset-0 -z-10">
+      <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img
           src={media.heroImage}
           alt="Cinematic mountain ridge at blue hour"
@@ -28,7 +28,7 @@ export function Hero() {
 
       <motion.div
         style={{ opacity }}
-        className="mx-auto w-full max-w-[1600px] px-6 pb-16 pt-32 md:px-10 md:pb-20"
+        className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-16 pt-32 md:px-10 md:pb-20"
       >
         <motion.p
           className="eyebrow"
