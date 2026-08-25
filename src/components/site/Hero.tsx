@@ -36,7 +36,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
-          Freelance Editor — Available 2026
+          VIDEO EDITOR — AVAILABLE 2026
         </motion.p>
 
         <h1 className="mt-6 leading-[0.82]">
