@@ -8,7 +8,7 @@
  */
 import heroImage from "@/assets/hero.jpg";
 import showreelPoster from "@/assets/work-cinematic.jpg";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/portrait.jpg.asset.json";
 import workCommercial from "@/assets/work-commercial.jpg";
 import workSocial from "@/assets/work-social.jpg";
 import workWedding from "@/assets/work-wedding.jpg";
