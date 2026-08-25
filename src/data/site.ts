@@ -31,7 +31,7 @@ export const contact = {
 
 export const media = {
   heroImage,
-  portrait,
+  portrait: portrait.url,
   showreel: {
     poster: showreelPoster,
     src: SHOWREEL_VIDEO,
