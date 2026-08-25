@@ -37,7 +37,7 @@ export function Showreel() {
               <iframe
                 title="Showreel"
                 src={media.showreel.src}
-                className="aspect-video w-full rounded-xl"
+                className="aspect-video w-full rounded-xl border-0"
                 allow="autoplay; fullscreen"
                 allowFullScreen
               />
