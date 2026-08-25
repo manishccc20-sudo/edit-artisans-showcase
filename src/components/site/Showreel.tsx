@@ -21,8 +21,6 @@ export function Showreel() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-            A two-minute cut of commercials, wedding films, product spots and social work from the
-            last three years — pacing, grade and sound design in one pass.
           </p>
         </Reveal>
       </div>
