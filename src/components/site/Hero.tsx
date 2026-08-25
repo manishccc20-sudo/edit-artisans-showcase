@@ -21,9 +21,9 @@ export function Hero() {
           alt="Editing suite lit by a colour-graded timeline"
           width={1920}
           height={1088}
-          className="h-full w-full scale-105 object-cover opacity-70"
+          className="h-full w-full scale-105 object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-background/55" />
+        <div className="absolute inset-0 bg-background/35" />
       </motion.div>
 
       <motion.div
