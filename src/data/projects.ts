@@ -92,7 +92,7 @@ export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => 
   title,
   category,
   reelUrl,
-  poster: posters[i % posters.length],
+  poster: posters[i % posters.length]!,
   description: DESCRIPTION,
   role: "Editing, Color, Sound Design",
   software: "Premiere Pro · After Effects · DaVinci Resolve",

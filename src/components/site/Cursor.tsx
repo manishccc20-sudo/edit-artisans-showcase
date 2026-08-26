@@ -20,7 +20,7 @@ export function Cursor() {
       x.set(e.clientX);
       y.set(e.clientY);
       const target = (e.target as HTMLElement | null)?.closest<HTMLElement>("[data-cursor]");
-      setLabel(target?.dataset.cursor ?? null);
+      setLabel(target?.dataset["cursor"] ?? null);
     };
     window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
