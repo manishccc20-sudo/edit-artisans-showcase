@@ -1,77 +1,88 @@
-import { Mail, MessageCircle, Instagram } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { contact, media, process, services, skills } from "@/data/site";
+import { contact, media, process, services, software } from "@/data/projects";
+
+export function Services() {
+  return (
+    <section id="services" className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36">
+      <Reveal>
+        <p className="eyebrow">03 — Services</p>
+        <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[7vw]">What I Do</h2>
+      </Reveal>
+
+      <ul className="mt-12 border-t border-border md:mt-20">
+        {services.map((s, i) => (
+          <li key={s.title}>
+            <Reveal delay={i * 0.04}>
+              <div className="group grid gap-3 border-b border-border py-8 md:grid-cols-12 md:items-baseline md:py-10">
+                <span className="eyebrow md:col-span-1">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="text-3xl uppercase tracking-tight transition-transform duration-500 group-hover:translate-x-2 md:col-span-6 md:text-5xl">
+                  {s.title}
+                </h3>
+                <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:col-span-5">
+                  {s.copy}
+                </p>
+              </div>
+            </Reveal>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36">
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+    <section id="about" className="border-y border-border bg-surface/30">
+      <div className="mx-auto grid max-w-[1600px] gap-12 px-6 py-24 md:grid-cols-12 md:gap-16 md:px-10 md:py-36">
         <Reveal className="md:col-span-5">
           <div className="cine-vignette relative overflow-hidden rounded-xl border border-border">
             <img
               src={media.portrait}
               alt="Portrait of Manish, video editor"
               loading="lazy"
-              width={1008}
-              height={1264}
-              className="aspect-[4/5] w-full object-cover opacity-90"
+              className="aspect-[4/5] w-full object-cover"
             />
+            <div className="grain pointer-events-none absolute inset-0" />
           </div>
         </Reveal>
 
-        <div className="md:col-span-7 md:pt-6">
+        <div className="md:col-span-7">
           <Reveal>
-            <p className="eyebrow">03 — About</p>
-            <h2 className="mt-6 text-[9vw] leading-[0.9] uppercase md:text-[4.4vw]">
-              Editing is more than cutting.
-            </h2>
+            <p className="eyebrow">04 — About</p>
+            <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[6vw]">About Me</h2>
           </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              I&apos;m Manish, a video editor focused on cinematic storytelling, engaging social
-              content, commercial videos and polished visual experiences.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="mt-14">
-              <p className="eyebrow">Toolkit</p>
-              <ul className="mt-6 grid grid-cols-1 border-t border-border sm:grid-cols-2">
-                {skills.map((s) => (
-                  <li
-                    key={s}
-                    className="border-b border-border py-4 text-sm uppercase tracking-[0.14em] text-foreground/90 sm:odd:pr-6"
-                  >
-                    {s}
-                  </li>
-                ))}
-              </ul>
+          <Reveal delay={0.1}>
+            <div className="mt-8 max-w-xl space-y-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+              <p>
+                I&apos;m Manish, a video editor passionate about turning raw footage into visually
+                engaging stories.
+              </p>
+              <p>
+                My approach combines rhythm, pacing, music, sound design, color and motion to create
+                edits that feel intentional and memorable.
+              </p>
+              <p>
+                From short-form social content to cinematic brand visuals, I focus on making every
+                frame serve the story.
+              </p>
             </div>
           </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-export function Services() {
-  return (
-    <section id="services" className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36">
-      <Reveal>
-        <p className="eyebrow">04 — Services</p>
-        <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[7vw]">What I Do</h2>
-      </Reveal>
-
-      <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border md:mt-20 md:grid-cols-3">
-        {services.map((s, i) => (
-          <Reveal key={s.title} delay={(i % 3) * 0.06}>
-            <article className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-surface md:p-10">
-              <p className="eyebrow">{String(i + 1).padStart(2, "0")}</p>
-              <h3 className="mt-8 text-2xl uppercase leading-tight md:text-3xl">{s.title}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
-            </article>
+          <Reveal delay={0.15}>
+            <p className="eyebrow mt-12">Software</p>
+            <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+              {software.map((s) => (
+                <li
+                  key={s}
+                  className="font-display text-xl font-extrabold uppercase tracking-tight text-foreground/80 md:text-3xl"
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
           </Reveal>
-        ))}
+        </div>
       </div>
     </section>
   );
@@ -82,63 +93,71 @@ export function Process() {
     <section id="process" className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36">
       <Reveal>
         <p className="eyebrow">05 — Process</p>
-        <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[7vw]">How It Works</h2>
+        <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[7vw]">How I Work</h2>
       </Reveal>
 
-      <ol className="mt-14 border-t border-border md:mt-20">
-        {process.map((step, i) => (
-          <Reveal key={step.no} delay={i * 0.05}>
-            <li className="group grid grid-cols-1 gap-4 border-b border-border py-8 transition-colors duration-500 hover:bg-surface md:grid-cols-12 md:items-baseline md:gap-8 md:py-12 md:pl-6">
-              <span className="eyebrow md:col-span-2">{step.no}</span>
-              <h3 className="text-3xl uppercase leading-none md:col-span-4 md:text-5xl">
-                {step.title}
-              </h3>
-              <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:col-span-6">
-                {step.copy}
+      <div className="mt-12 grid gap-px border border-border bg-border md:mt-20 md:grid-cols-4">
+        {process.map((p, i) => (
+          <Reveal key={p.no} delay={i * 0.06} className="bg-background">
+            <div className="h-full p-8 md:p-10">
+              <p className="font-display text-5xl font-extrabold text-muted-foreground/40 md:text-6xl">
+                {p.no}
               </p>
-            </li>
+              <h3 className="mt-8 text-xl uppercase tracking-tight md:text-2xl">{p.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.copy}</p>
+            </div>
           </Reveal>
         ))}
-      </ol>
+      </div>
     </section>
   );
 }
 
 export function Contact() {
-  const items = [
-    { label: "Email me", href: `mailto:${contact.email}`, Icon: Mail, external: false },
-    { label: "WhatsApp", href: contact.whatsapp, Icon: MessageCircle, external: true },
-    { label: "Instagram", href: contact.instagram, Icon: Instagram, external: true },
-  ];
-
   return (
-    <section id="contact" className="mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-44">
-      <Reveal>
-        <p className="eyebrow">06 — Contact</p>
-        <h2 className="mt-6 max-w-5xl text-[12vw] leading-[0.85] uppercase md:text-[7vw]">
-          Have a story to tell?
-        </h2>
-      </Reveal>
-      <Reveal delay={0.12}>
-        <p className="mt-8 max-w-xl text-base text-muted-foreground md:text-lg">
-          Let&apos;s turn your footage into something people remember.
-        </p>
-      </Reveal>
-      <Reveal delay={0.2}>
-        <div className="mt-12 flex flex-wrap gap-3">
-          {items.map(({ label, href, Icon, external }) => (
+    <section id="contact" className="border-t border-border">
+      <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
+        <Reveal>
+          <p className="eyebrow">06 — Contact</p>
+          <h2 className="mt-6 text-[14vw] leading-[0.84] uppercase md:text-[9vw]">
+            Have a story
+            <br />
+            to tell?
+          </h2>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <p className="mt-8 max-w-lg text-base text-muted-foreground md:text-lg">
+            Let&apos;s turn your footage into something people remember.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <div className="mt-10 flex flex-wrap gap-3">
             <a
-              key={label}
-              href={href}
-              {...(external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
-              className="inline-flex items-center gap-3 rounded-md border border-border px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] transition-colors first:border-transparent first:bg-primary first:text-primary-foreground hover:bg-secondary first:hover:bg-primary/85"
+              href={`mailto:${contact.email}`}
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-primary-foreground transition-opacity hover:opacity-85"
             >
-              <Icon className="h-4 w-4" aria-hidden="true" />
-              {label}
+              Start a project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
-          ))}
-        </div>
-      </Reveal>
+            <a
+              href={contact.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] transition-colors hover:bg-secondary"
+            >
+              Instagram <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
+
+          <a
+            href={`mailto:${contact.email}`}
+            className="mt-12 inline-block font-display text-2xl font-extrabold uppercase tracking-tight underline-offset-8 hover:underline md:text-4xl"
+          >
+            {contact.email}
+          </a>
+        </Reveal>
+      </div>
     </section>
   );
 }
@@ -146,11 +165,60 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-10">
-        <p className="font-display text-sm font-extrabold uppercase tracking-[0.3em]">
-          Manish — Video Editor
-        </p>
-        <p className="text-xs text-muted-foreground">© 2026 Manish. All rights reserved.</p>
+      <div className="mx-auto grid max-w-[1600px] gap-10 px-6 py-14 md:grid-cols-3 md:px-10">
+        <div>
+          <p className="font-display text-lg font-extrabold tracking-[0.3em]">MANISH</p>
+          <p className="eyebrow mt-3">Video Editor / Creative</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <ul className="flex flex-wrap gap-x-8 gap-y-2">
+            {["Work", "About", "Services", "Contact"].map((l) => (
+              <li key={l}>
+                <a
+                  href={`#${l.toLowerCase()}`}
+                  className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
+                >
+                  {l}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <ul className="flex flex-wrap gap-x-8 gap-y-2 md:justify-end">
+          <li>
+            <a
+              href={contact.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
+            >
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href={`mailto:${contact.email}`}
+              className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
+            >
+              Email
+            </a>
+          </li>
+          <li>
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="mx-auto max-w-[1600px] border-t border-border px-6 py-6 md:px-10">
+        <p className="eyebrow">© 2026 Manish. All rights reserved.</p>
       </div>
     </footer>
   );
