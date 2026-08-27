@@ -8,12 +8,9 @@ import { cn } from "@/lib/utils";
 
 /** Editorial rhythm: sizes repeat in a 6-tile pattern. */
 const pattern = [
-  { span: "md:col-span-8", aspect: "aspect-[16/10]", size: "lg" as const },
-  { span: "md:col-span-4", aspect: "aspect-[9/16]", size: "sm" as const },
-  { span: "md:col-span-4", aspect: "aspect-[9/16]", size: "sm" as const },
-  { span: "md:col-span-8", aspect: "aspect-[16/10]", size: "lg" as const },
-  { span: "md:col-span-6", aspect: "aspect-[4/5]", size: "md" as const },
-  { span: "md:col-span-6", aspect: "aspect-[4/5]", size: "md" as const },
+  { span: "md:col-span-4", aspect: "aspect-[9/16]", size: "md" as const },
+  { span: "md:col-span-4", aspect: "aspect-[9/16]", size: "md" as const },
+  { span: "md:col-span-4", aspect: "aspect-[9/16]", size: "md" as const },
 ];
 
 export function FeaturedWork() {
