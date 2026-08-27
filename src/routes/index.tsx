@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Nav } from "@/components/site/Nav";
+import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
+import { FeaturedWork } from "@/components/site/FeaturedWork";
 import { Showreel } from "@/components/site/Showreel";
-import { Work } from "@/components/site/Work";
+import { Cursor } from "@/components/site/Cursor";
 import { About, Contact, Footer, Process, Services } from "@/components/site/Sections";
 
-const title = "Manish — Video Editor | Cinematic Editing & Color Grading";
+const title = "Manish — Video Editor | Cinematic Edits & Short-Form Content";
 const description =
-  "Manish is a freelance video editor crafting cinematic commercials, wedding films, product spots and social content. Watch the showreel and selected work.";
+  "Manish is a video editor crafting cinematic stories, commercials, product films and high-retention short-form content. Watch selected reels and the showreel.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,7 +18,6 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -29,6 +29,7 @@ export const Route = createFileRoute("/")({
           "@type": "Person",
           name: "Manish",
           jobTitle: "Video Editor",
+          email: "dasarimanish983@gmail.com",
           description,
         }),
       },
@@ -40,13 +41,14 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <Nav />
+      <Cursor />
+      <Navbar />
       <main>
         <Hero />
+        <FeaturedWork />
         <Showreel />
-        <Work />
-        <About />
         <Services />
+        <About />
         <Process />
         <Contact />
       </main>
