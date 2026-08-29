@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { media } from "@/data/projects";
 
-const lines = ["VIDEO EDITOR", "CRAFTING STORIES", "THAT MOVE."];
+const lines = ["VIDEO EDITOR", "MANISH DASARI", ""];
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
