@@ -1,12 +1,13 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import type { Project } from "@/data/projects";
+import { embedUrl, type Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
 export function PortfolioCard({
   project,
   onOpen,
-  aspect = "aspect-[4/5]",
+  aspect = "aspect-[9/16]",
   size = "md",
 }: {
   project: Project;
@@ -14,6 +15,8 @@ export function PortfolioCard({
   aspect?: string;
   size?: "sm" | "md" | "lg";
 }) {
+  const [preview, setPreview] = useState(false);
+
   return (
     <motion.div
       layout
@@ -22,6 +25,8 @@ export function PortfolioCard({
       exit={{ opacity: 0, y: -12 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      onHoverStart={() => setPreview(true)}
+      onHoverEnd={() => setPreview(false)}
     >
       <button
         type="button"
@@ -37,6 +42,15 @@ export function PortfolioCard({
             loading="lazy"
             className="h-full w-full object-cover opacity-70 transition-all duration-[900ms] ease-out group-hover:scale-[1.05] group-hover:opacity-100"
           />
+          {preview ? (
+            <iframe
+              title={`${project.title} preview`}
+              src={embedUrl(project.reelUrl)}
+              className="pointer-events-none absolute inset-0 h-full w-full border-0 bg-surface"
+              loading="lazy"
+              allow="autoplay; encrypted-media; picture-in-picture"
+            />
+          ) : null}
           <div className="grain pointer-events-none absolute inset-0" />
           <span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase tracking-[0.24em] text-foreground/80">
             {project.no}
