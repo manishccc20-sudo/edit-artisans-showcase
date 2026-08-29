@@ -23,9 +23,10 @@ export function Hero() {
           alt="Cinematic ridge at blue hour used as hero backdrop"
           width={1920}
           height={1088}
-          className="h-full w-full scale-105 object-cover opacity-60"
+          className="h-full w-full scale-105 object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-background/55" />
+        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(60rem_40rem_at_20%_20%,color-mix(in_oklab,var(--glow)_35%,transparent),transparent_65%)]" />
         <div className="grain absolute inset-0" />
       </motion.div>
 
@@ -46,7 +47,7 @@ export function Hero() {
           {lines.map((line, i) => (
             <span key={line} className="block overflow-hidden">
               <motion.span
-                className="block text-[13vw] font-extrabold uppercase tracking-[-0.045em] md:text-[8.4vw]"
+                className="chrome-text block text-[13vw] font-extrabold uppercase tracking-[-0.045em] md:text-[8.4vw]"
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1.1, delay: 0.15 + i * 0.11, ease: [0.16, 1, 0.3, 1] }}

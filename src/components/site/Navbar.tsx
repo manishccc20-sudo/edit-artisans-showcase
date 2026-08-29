@@ -31,9 +31,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled
-          ? "border-b border-border bg-background/70 backdrop-blur-xl"
-          : "border-b border-transparent",
+        scrolled ? "backdrop-blur-xl" : "",
       )}
     >
       <nav
@@ -47,13 +45,13 @@ export function Navbar() {
           MANISH
         </a>
 
-        <div className="hidden items-center gap-10 md:flex">
-          <ul className="flex items-center gap-9">
+        <div className="hidden items-center gap-6 md:flex">
+          <ul className="pill-nav flex items-center gap-2 px-2 py-1.5">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+                  className="rounded-full px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
                 >
                   {l.label}
                 </a>
@@ -62,7 +60,7 @@ export function Navbar() {
           </ul>
           <a
             href="#contact"
-            className="rounded-full border border-border px-5 py-2.5 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-foreground transition-colors hover:bg-secondary"
+            className="glow-panel rounded-full px-5 py-2.5 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-foreground transition-transform hover:-translate-y-0.5"
           >
             Let&apos;s work →
           </a>
