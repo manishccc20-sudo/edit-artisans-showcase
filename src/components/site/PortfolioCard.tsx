@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import type { Project } from "@/data/projects";
+import { embedUrl, type Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
 export function PortfolioCard({
