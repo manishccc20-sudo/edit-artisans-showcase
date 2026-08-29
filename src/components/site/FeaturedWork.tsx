@@ -23,7 +23,7 @@ export function FeaturedWork() {
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <Reveal>
           <p className="eyebrow">01 — Portfolio</p>
-          <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[7vw]">Selected Work</h2>
+          <h2 className="mt-4 text-[13vw] leading-[0.85] uppercase md:text-[7vw]">THIS ARE MY WORKS</h2>
           <p className="mt-6 max-w-md text-sm text-muted-foreground md:text-base">
             A selection of edits, stories and visual experiments.
           </p>
