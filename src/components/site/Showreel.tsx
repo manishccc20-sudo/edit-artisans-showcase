@@ -13,9 +13,7 @@ export function Showreel() {
           <Reveal>
             <p className="eyebrow">02 — Reel</p>
             <h2 className="mt-4 text-[13vw] leading-[0.84] uppercase md:text-[7vw]">
-              My Editing
-              <br />
-              In Motion.
+              MY SHOWREEL
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
