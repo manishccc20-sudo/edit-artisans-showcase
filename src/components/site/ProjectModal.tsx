@@ -24,7 +24,6 @@ export function ProjectModal({
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
-    closeRef.current?.focus();
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
