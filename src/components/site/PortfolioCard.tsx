@@ -63,17 +63,6 @@ export function PortfolioCard({
             <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />
           </span>
         </div>
-        <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-border pt-4">
-          <h3
-            className={cn(
-              "uppercase tracking-tight transition-transform duration-500 group-hover:-translate-y-0.5",
-              size === "lg" ? "text-2xl md:text-4xl" : size === "sm" ? "text-base md:text-lg" : "text-lg md:text-2xl",
-            )}
-          >
-            {project.title}
-          </h3>
-          <p className="eyebrow shrink-0">{project.category}</p>
-        </div>
       </button>
     </motion.div>
   );
