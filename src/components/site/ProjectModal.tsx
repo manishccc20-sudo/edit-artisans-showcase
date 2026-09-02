@@ -115,7 +115,7 @@ export function ProjectModal({
                 <dl className="mt-10 space-y-5 border-t border-border pt-8">
                   <div>
                     <dt className="eyebrow"></dt>
-                    <dd className="mt-1 text-sm">{project.category}</dd>
+                    <dd className="mt-1 text-sm"></dd>
                   </div>
                   <div>
                     <dt className="eyebrow"></dt>
