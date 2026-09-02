@@ -59,7 +59,7 @@ export function ProjectModal({
               </p>
             </div>
 
-            <div className="grid gap-10 md:grid-cols-[minmax(0,420px)_1fr] md:gap-14">
+            <div className="mx-auto max-w-md">
               <div className="overflow-hidden rounded-xl border border-border bg-surface">
                 {embedFailed ? (
                   <a
@@ -92,31 +92,6 @@ export function ProjectModal({
                     onError={() => setEmbedFailed(true)}
                   />
                 )}
-              </div>
-
-              <div>
-                <h3 className="font-display text-4xl uppercase leading-[0.9] md:text-6xl">
-                  {project.title}
-                </h3>
-                <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-                  {project.description}
-                </p>
-
-                <dl className="mt-10 space-y-5 border-t border-border pt-8">
-                  <div>
-                    <dt className="eyebrow"></dt>
-                    <dd className="mt-1 text-sm"></dd>
-                  </div>
-                  <div>
-                    <dt className="eyebrow"></dt>
-                    <dd className="mt-1 text-sm">{project.role}</dd>
-                  </div>
-                  <div>
-                    <dt className="eyebrow"></dt>
-                    <dd className="mt-1 text-sm">{project.software}</dd>
-                  </div>
-                </dl>
-
               </div>
             </div>
           </motion.div>
