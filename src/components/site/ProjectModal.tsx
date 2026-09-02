@@ -114,15 +114,15 @@ export function ProjectModal({
 
                 <dl className="mt-10 space-y-5 border-t border-border pt-8">
                   <div>
-                    <dt className="eyebrow">Category</dt>
+                    <dt className="eyebrow"></dt>
                     <dd className="mt-1 text-sm">{project.category}</dd>
                   </div>
                   <div>
-                    <dt className="eyebrow">Editing role</dt>
+                    <dt className="eyebrow"></dt>
                     <dd className="mt-1 text-sm">{project.role}</dd>
                   </div>
                   <div>
-                    <dt className="eyebrow">Software</dt>
+                    <dt className="eyebrow"></dt>
                     <dd className="mt-1 text-sm">{project.software}</dd>
                   </div>
                 </dl>
@@ -133,7 +133,6 @@ export function ProjectModal({
                   rel="noopener noreferrer"
                   className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-primary-foreground transition-opacity hover:opacity-85"
                 >
-                  Watch on Instagram
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>

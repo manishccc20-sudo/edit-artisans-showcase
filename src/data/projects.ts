@@ -55,7 +55,7 @@ export type Project = {
 const posters = [posterA, posterB, posterC, posterD, posterE];
 
 const DESCRIPTION =
-  "Creative video edit focused on rhythm, pacing, sound design and visual storytelling.";
+  "";
 
 type Seed = [title: string, category: Project["category"], url: string];
 
@@ -81,7 +81,7 @@ const seeds: Seed[] = [
   ["Editorial Motion", "Editorial", "https://www.instagram.com/reel/DUiWAc7k5eH/"],
   ["Brand Visual", "Commercial", "https://www.instagram.com/reel/DTZ4-3aicWL/"],
   ["Social Film", "Social Media", "https://www.instagram.com/reel/DS7hpgiE5sn/"],
-  ["Visual Experiment", "Creative Edit", "https://www.instagram.com/reels/DUYG0NsjIYE/"],
+  ["", "Creative Edit", "https://www.instagram.com/reels/DUYG0NsjIYE/"],
   ["Story In Motion", "Motion", "https://www.instagram.com/reel/DS2OBAtDIGm/"],
   ["Selected Cut", "Editorial", "https://www.instagram.com/reel/DP8UL6ZAQuE/"],
 ];
@@ -94,8 +94,8 @@ export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => 
   reelUrl,
   poster: posters[i % posters.length]!,
   description: DESCRIPTION,
-  role: "Editing, Color, Sound Design",
-  software: "Premiere Pro · After Effects · DaVinci Resolve",
+  role: "",
+  software: "",
 }));
 
 /** Instagram embed URL derived from a reel link. */
