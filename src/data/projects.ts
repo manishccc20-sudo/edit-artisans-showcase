@@ -20,7 +20,7 @@ export const contact = {
 };
 
 export const media = {
-  heroImage,
+  heroImage: heroImageAsset.url,
   portrait: portrait.url,
   showreelPoster,
   showreelUrl:
