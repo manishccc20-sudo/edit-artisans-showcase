@@ -9,7 +9,7 @@ import posterB from "@/assets/work-commercial.jpg";
 import posterC from "@/assets/work-social.jpg";
 import posterD from "@/assets/work-product.jpg";
 import posterE from "@/assets/work-wedding.jpg";
-import heroImage from "@/assets/hero.jpg";
+import heroImageAsset from "@/assets/video-editing.jpg.asset.json";
 import showreelPoster from "@/assets/showreel-poster.jpg";
 import portrait from "@/assets/portrait.jpg.asset.json";
 
