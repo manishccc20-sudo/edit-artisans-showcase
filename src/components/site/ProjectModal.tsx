@@ -57,15 +57,6 @@ export function ProjectModal({
               <p className="eyebrow">
                 {project.no} — {project.category}
               </p>
-              <button
-                ref={closeRef}
-                type="button"
-                onClick={onClose}
-                aria-label="Close project"
-                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-secondary"
-              >
-                <X className="h-5 w-5" />
-              </button>
             </div>
 
             <div className="grid gap-10 md:grid-cols-[minmax(0,420px)_1fr] md:gap-14">
