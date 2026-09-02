@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { X, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { embedUrl, type Project } from "@/data/projects";
 
 export function ProjectModal({
