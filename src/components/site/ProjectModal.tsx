@@ -10,7 +10,7 @@ export function ProjectModal({
   project: Project | null;
   onClose: () => void;
 }) {
-  const closeRef = useRef<HTMLButtonElement>(null);
+  
   const [embedFailed, setEmbedFailed] = useState(false);
 
   useEffect(() => {
