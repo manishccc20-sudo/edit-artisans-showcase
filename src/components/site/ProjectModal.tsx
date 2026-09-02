@@ -127,14 +127,6 @@ export function ProjectModal({
                   </div>
                 </dl>
 
-                <a
-                  href={project.reelUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-primary-foreground transition-opacity hover:opacity-85"
-                >
-                  <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-                </a>
               </div>
             </div>
           </motion.div>
