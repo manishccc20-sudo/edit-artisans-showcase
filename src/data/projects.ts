@@ -79,7 +79,7 @@ const seeds: Seed[] = [
   ["Cinematic Cut", "Cinematic", "https://www.instagram.com/reel/DUS7mUkjMNc/"],
   ["Creative Film", "Creative Edit", "https://www.instagram.com/reel/DVQuxckkRII/"],
   ["Editorial Motion", "Editorial", "https://www.instagram.com/reel/DUiWAc7k5eH/"],
-  ["Brand Visual", "Commercial", "https://www.instagram.com/reel/DTZ4-3aicWL/"],
+  ["Brand Visual", "", "https://www.instagram.com/reel/DTZ4-3aicWL/"],
   ["Social Film", "Social Media", "https://www.instagram.com/reel/DS7hpgiE5sn/"],
   ["", "Creative Edit", "https://www.instagram.com/reels/DUYG0NsjIYE/"],
   ["Story In Motion", "Motion", "https://www.instagram.com/reel/DS2OBAtDIGm/"],
