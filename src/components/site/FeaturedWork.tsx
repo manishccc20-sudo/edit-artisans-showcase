@@ -1,22 +1,15 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Reveal } from "./Reveal";
 import { PortfolioCard } from "./PortfolioCard";
 import { ProjectModal } from "./ProjectModal";
-import { categories, projects, type Category, type Project } from "@/data/projects";
-import { cn } from "@/lib/utils";
+import { projects, type Project } from "@/data/projects";
 
 /** All tiles are vertical (9:16), three per row on desktop. */
 const pattern = [{ span: "md:col-span-4", aspect: "aspect-[9/16]", size: "md" as const }];
 
 export function FeaturedWork() {
-  const [filter, setFilter] = useState<Category>("All");
   const [active, setActive] = useState<Project | null>(null);
-
-  const visible = useMemo(
-    () => (filter === "All" ? projects : projects.filter((p) => p.category === filter)),
-    [filter],
-  );
 
   return (
     <section id="work" className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36">
