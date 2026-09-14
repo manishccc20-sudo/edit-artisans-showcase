@@ -27,7 +27,7 @@ export const media = {
     "https://drive.google.com/file/d/1HaZ0Hh01bdxE7b_NQlYVvHhRq_Ouo0qZ/preview",
 };
 
-export const categories = [
+export const allCategories = [
   "All",
   "Cinematic",
   "Product",
@@ -36,7 +36,9 @@ export const categories = [
   "Creative Edit",
 ] as const;
 
-export type Category = (typeof categories)[number];
+export type Category = (typeof allCategories)[number];
+
+export const categories: Category[] = ["All"];
 
 export type Project = {
   id: string;
