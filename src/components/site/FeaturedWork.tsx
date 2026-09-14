@@ -21,32 +21,11 @@ export function FeaturedWork() {
             A selection of edits, stories and visual experiments.
           </p>
         </Reveal>
-        <Reveal delay={0.1}>
-          <ul className="flex flex-wrap gap-2">
-            {categories.map((c) => (
-              <li key={c}>
-                <button
-                  type="button"
-                  onClick={() => setFilter(c)}
-                  aria-pressed={filter === c}
-                  className={cn(
-                    "rounded-full border px-4 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.18em] transition-colors",
-                    filter === c
-                      ? "border-transparent bg-primary text-primary-foreground"
-                      : "border-border text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  {c}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
       </div>
 
       <motion.div layout className="mt-12 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-12 md:gap-8">
         <AnimatePresence mode="popLayout">
-          {visible.map((p, i) => {
+          {projects.map((p, i) => {
             const cell = pattern[i % pattern.length]!;
             return (
               <motion.div layout key={p.id} className={cell.span}>
