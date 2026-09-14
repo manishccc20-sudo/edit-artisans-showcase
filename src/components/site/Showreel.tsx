@@ -18,7 +18,7 @@ export function Showreel() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-              A collection of cuts, transitions, pacing, sound design and visual storytelling.
+              
             </p>
           </Reveal>
         </div>
