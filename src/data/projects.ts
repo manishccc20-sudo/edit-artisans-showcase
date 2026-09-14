@@ -29,7 +29,6 @@ export const media = {
 
 export const categories = [
   "All",
-  "",
   "Social Media",
   "Cinematic",
   "Product",
