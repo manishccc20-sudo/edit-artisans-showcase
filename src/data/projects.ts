@@ -13,6 +13,7 @@ import heroImageAsset from "@/assets/video-editing.jpg.asset.json";
 import showreelPoster from "@/assets/showreel-poster.jpg";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import portfolio01Video from "@/assets/portfolio-01.mp4.asset.json";
+import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
 
 export const contact = {
   email: "dasarimanish983@gmail.com",
