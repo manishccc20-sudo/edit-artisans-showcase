@@ -94,6 +94,7 @@ export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => 
   title,
   category,
   reelUrl,
+  videoUrl: i === 0 ? portfolio01Video.url : undefined,
   poster: posters[i % posters.length]!,
   description: DESCRIPTION,
   role: "",
