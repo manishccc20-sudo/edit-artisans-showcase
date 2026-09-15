@@ -65,7 +65,7 @@ type Seed = [title: string, category: Project["category"], url: string];
 
 const seeds: Seed[] = [
   ["Visual Story", "", "https://www.instagram.com/reel/DTNqYoPk0AC/"],
-  ["Motion Study", "Motion", "https://www.instagram.com/reel/DR64iZOE8cI/"],
+  ["Motion Study", "", "https://www.instagram.com/reel/DR64iZOE8cI/"],
   ["Cinematic Edit", "Cinematic", "https://www.instagram.com/reel/DQtsUlVk7SG/"],
   ["Brand Film", "Product", "https://www.instagram.com/reel/DPoPdJtk1Oa/"],
   ["Visual Campaign", "Editorial", "https://www.instagram.com/reel/DSopGivkzTb/"],
