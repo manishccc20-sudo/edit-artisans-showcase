@@ -18,6 +18,8 @@ import portfolio03Video from "@/assets/portfolio-03.mp4.asset.json";
 
 import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
 import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
+import portfolio03Thumb from "@/assets/portfolio-03-thumb.jpg.asset.json";
+
 
 
 export const contact = {
