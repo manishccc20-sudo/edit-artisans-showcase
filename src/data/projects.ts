@@ -14,6 +14,8 @@ import showreelPoster from "@/assets/showreel-poster.jpg";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import portfolio01Video from "@/assets/portfolio-01.mp4.asset.json";
 import portfolio02Video from "@/assets/portfolio-02.mp4.asset.json";
+import portfolio03Video from "@/assets/portfolio-03.mp4.asset.json";
+
 import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
 import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
 
@@ -98,7 +100,7 @@ export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => 
   title,
   category,
   reelUrl,
-  videoUrl: i === 0 ? portfolio01Video.url : i === 1 ? portfolio02Video.url : undefined,
+  videoUrl: i === 0 ? portfolio01Video.url : i === 1 ? portfolio02Video.url : i === 2 ? portfolio03Video.url : undefined,
   poster: i === 0 ? portfolio01Thumb.url : i === 1 ? portfolio02Thumb.url : posters[i % posters.length]!,
   description: DESCRIPTION,
   role: "",
