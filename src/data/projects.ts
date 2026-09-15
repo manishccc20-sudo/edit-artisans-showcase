@@ -15,6 +15,8 @@ import portrait from "@/assets/portrait.jpg.asset.json";
 import portfolio01Video from "@/assets/portfolio-01.mp4.asset.json";
 import portfolio02Video from "@/assets/portfolio-02.mp4.asset.json";
 import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
+import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
+
 
 export const contact = {
   email: "dasarimanish983@gmail.com",
