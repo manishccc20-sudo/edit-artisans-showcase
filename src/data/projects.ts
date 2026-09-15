@@ -46,7 +46,7 @@ export type Project = {
   id: string;
   no: string;
   title: string;
-  category: Exclude<Category, "All">;
+  category: Exclude<Category, "All"> | "";
   reelUrl: string;
   poster: string;
   videoUrl?: string | undefined;
@@ -63,7 +63,7 @@ const DESCRIPTION =
 type Seed = [title: string, category: Project["category"], url: string];
 
 const seeds: Seed[] = [
-  ["Visual Story", "Cinematic", "https://www.instagram.com/reel/DTNqYoPk0AC/"],
+  ["Visual Story", "", "https://www.instagram.com/reel/DTNqYoPk0AC/"],
   ["Motion Study", "Motion", "https://www.instagram.com/reel/DR64iZOE8cI/"],
   ["Cinematic Edit", "Cinematic", "https://www.instagram.com/reel/DQtsUlVk7SG/"],
   ["Brand Film", "Product", "https://www.instagram.com/reel/DPoPdJtk1Oa/"],
