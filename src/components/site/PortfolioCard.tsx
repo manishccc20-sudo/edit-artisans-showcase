@@ -43,13 +43,24 @@ export function PortfolioCard({
             className="h-full w-full object-cover opacity-70 transition-all duration-[900ms] ease-out group-hover:scale-[1.05] group-hover:opacity-100"
           />
           {preview ? (
-            <iframe
-              title={`${project.title} preview`}
-              src={embedUrl(project.reelUrl)}
-              className="pointer-events-none absolute inset-0 h-full w-full border-0 bg-surface"
-              loading="lazy"
-              allow="autoplay; encrypted-media; picture-in-picture"
-            />
+            project.videoUrl ? (
+              <video
+                src={project.videoUrl}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover bg-surface"
+              />
+            ) : (
+              <iframe
+                title={`${project.title} preview`}
+                src={embedUrl(project.reelUrl)}
+                className="pointer-events-none absolute inset-0 h-full w-full border-0 bg-surface"
+                loading="lazy"
+                allow="autoplay; encrypted-media; picture-in-picture"
+              />
+            )
           ) : null}
           <div className="grain pointer-events-none absolute inset-0" />
           <span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase tracking-[0.24em] text-foreground/80">

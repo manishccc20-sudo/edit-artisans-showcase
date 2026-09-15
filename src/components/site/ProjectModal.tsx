@@ -80,6 +80,17 @@ export function ProjectModal({
                       </span>
                     </span>
                   </a>
+                ) : project.videoUrl ? (
+                  <video
+                    key={project.id}
+                    src={project.videoUrl}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    className="aspect-[9/16] w-full object-cover bg-surface"
+                  />
                 ) : (
                   <iframe
                     key={project.id}
