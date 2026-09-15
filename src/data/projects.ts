@@ -48,7 +48,7 @@ export type Project = {
   category: Exclude<Category, "All">;
   reelUrl: string;
   poster: string;
-  videoUrl?: string;
+  videoUrl?: string | undefined;
   description: string;
   role: string;
   software: string;
