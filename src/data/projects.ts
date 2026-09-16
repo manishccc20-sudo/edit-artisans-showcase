@@ -17,12 +17,14 @@ import portfolio02Video from "@/assets/portfolio-02.mp4.asset.json";
 import portfolio03Video from "@/assets/portfolio-03.mp4.asset.json";
 import portfolio04Video from "@/assets/portfolio-04.mp4.asset.json";
 import portfolio05Video from "@/assets/portfolio-05.mp4.asset.json";
+import portfolio06Video from "@/assets/portfolio-06.mp4.asset.json";
 
 import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
 import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
 import portfolio03Thumb from "@/assets/portfolio-03-thumb.jpg.asset.json";
 import portfolio04Thumb from "@/assets/portfolio-04-thumb.jpg.asset.json";
 import portfolio05Thumb from "@/assets/portfolio-05-thumb.jpg.asset.json";
+import portfolio06Thumb from "@/assets/portfolio-06-thumb.jpg.asset.json";
 
 
 
@@ -109,8 +111,8 @@ export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => 
   title,
   category,
   reelUrl,
-  videoUrl: i === 0 ? portfolio01Video.url : i === 1 ? portfolio02Video.url : i === 2 ? portfolio03Video.url : i === 3 ? portfolio04Video.url : i === 4 ? portfolio05Video.url : undefined,
-  poster: i === 0 ? portfolio01Thumb.url : i === 1 ? portfolio02Thumb.url : i === 2 ? portfolio03Thumb.url : i === 3 ? portfolio04Thumb.url : i === 4 ? portfolio05Thumb.url : posters[i % posters.length]!,
+  videoUrl: i === 0 ? portfolio01Video.url : i === 1 ? portfolio02Video.url : i === 2 ? portfolio03Video.url : i === 3 ? portfolio04Video.url : i === 4 ? portfolio05Video.url : i === 5 ? portfolio06Video.url : undefined,
+  poster: i === 0 ? portfolio01Thumb.url : i === 1 ? portfolio02Thumb.url : i === 2 ? portfolio03Thumb.url : i === 3 ? portfolio04Thumb.url : i === 4 ? portfolio05Thumb.url : i === 5 ? portfolio06Thumb.url : posters[i % posters.length]!,
   description: DESCRIPTION,
   role: "",
   software: "",
