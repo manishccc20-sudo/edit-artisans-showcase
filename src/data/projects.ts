@@ -21,6 +21,7 @@ import portfolio06Video from "@/assets/portfolio-06.mp4.asset.json";
 import portfolio07Video from "@/assets/portfolio-07.mp4.asset.json";
 import portfolio08Video from "@/assets/portfolio-08.mp4.asset.json";
 import portfolio09Video from "@/assets/portfolio-09.mp4.asset.json";
+import portfolio10Video from "@/assets/portfolio-10.mp4.asset.json";
 
 import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
 import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
@@ -31,6 +32,7 @@ import portfolio06Thumb from "@/assets/portfolio-06-thumb.jpg.asset.json";
 import portfolio07Thumb from "@/assets/portfolio-07-thumb.jpg.asset.json";
 import portfolio08Thumb from "@/assets/portfolio-08-thumb.jpg.asset.json";
 import portfolio09Thumb from "@/assets/portfolio-09-thumb.jpg.asset.json";
+import portfolio10Thumb from "@/assets/portfolio-10-thumb.jpg.asset.json";
 
 
 
