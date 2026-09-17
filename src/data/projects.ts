@@ -36,6 +36,9 @@ import portfolio08Thumb from "@/assets/portfolio-08-thumb.jpg.asset.json";
 import portfolio09Thumb from "@/assets/portfolio-09-thumb.jpg.asset.json";
 import portfolio10Thumb from "@/assets/portfolio-10-thumb.jpg.asset.json";
 import portfolio11Thumb from "@/assets/portfolio-11-thumb.jpg.asset.json";
+import portfolio12Thumb from "@/assets/portfolio-12-thumb.jpg.asset.json";
+
+
 
 
 
