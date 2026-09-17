@@ -23,6 +23,7 @@ import portfolio08Video from "@/assets/portfolio-08.mp4.asset.json";
 import portfolio09Video from "@/assets/portfolio-09.mp4.asset.json";
 import portfolio10Video from "@/assets/portfolio-10.mp4.asset.json";
 import portfolio11Video from "@/assets/portfolio-11.mp4.asset.json";
+import portfolio12Video from "@/assets/portfolio-12.mp4.asset.json";
 
 import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
 import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
