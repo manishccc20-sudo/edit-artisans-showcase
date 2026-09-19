@@ -16,7 +16,6 @@ export function PortfolioCard({
   size?: "sm" | "md" | "lg";
 }) {
   const [preview, setPreview] = useState(false);
-  const hideOverlay = ["01", "22", "23", "24"].includes(project.no);
 
   return (
     <motion.div
@@ -31,15 +30,15 @@ export function PortfolioCard({
     >
       <button
         type="button"
-        data-cursor={hideOverlay ? undefined : "View project ↗"}
+        data-cursor="View project ↗"
         onClick={() => onOpen(project)}
-        aria-label={`Open ${project.title || "project " + project.no}`}
+        aria-label={`Open ${project.title}`}
         className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
       >
         <div className={cn("relative overflow-hidden rounded-xl border border-border bg-surface", aspect)}>
           <img
             src={project.poster}
-            alt={`${project.title || "project " + project.no} — ${project.category} edit still`}
+            alt={`${project.title} — ${project.category} edit still`}
             loading="lazy"
             className="h-full w-full object-cover opacity-70 transition-all duration-[900ms] ease-out group-hover:scale-[1.05] group-hover:opacity-100"
           />
@@ -55,7 +54,7 @@ export function PortfolioCard({
               />
             ) : (
               <iframe
-                title={`${project.title || "project " + project.no} preview`}
+                title={`${project.title} preview`}
                 src={embedUrl(project.reelUrl)}
                 className="pointer-events-none absolute inset-0 h-full w-full border-0 bg-surface"
                 loading="lazy"
@@ -64,20 +63,16 @@ export function PortfolioCard({
             )
           ) : null}
           <div className="grain pointer-events-none absolute inset-0" />
-          {!hideOverlay && (
-            <>
-              <span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase tracking-[0.24em] text-foreground/80">
-                {project.no}
-              </span>
-              <span className="absolute right-5 top-5 translate-y-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-foreground/0 transition-all duration-500 group-hover:translate-y-0 group-hover:text-foreground/85">
-                {project.category}
-              </span>
-              <span className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4 translate-y-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <span className="text-xs text-muted-foreground">{project.description.slice(0, 52)}…</span>
-                <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />
-              </span>
-            </>
-          )}
+          <span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase tracking-[0.24em] text-foreground/80">
+            {project.no}
+          </span>
+          <span className="absolute right-5 top-5 translate-y-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-foreground/0 transition-all duration-500 group-hover:translate-y-0 group-hover:text-foreground/85">
+            {project.category}
+          </span>
+          <span className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4 translate-y-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <span className="text-xs text-muted-foreground">{project.description.slice(0, 52)}…</span>
+            <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />
+          </span>
         </div>
       </button>
     </motion.div>
