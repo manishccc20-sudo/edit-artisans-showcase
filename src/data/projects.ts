@@ -4,11 +4,6 @@
  * Add / remove projects, swap reel URLs, change posters.
  * ─────────────────────────────────────────────────────────────
  */
-import posterA from "@/assets/work-cinematic.jpg";
-import posterB from "@/assets/work-commercial.jpg";
-import posterC from "@/assets/work-social.jpg";
-import posterD from "@/assets/work-product.jpg";
-import posterE from "@/assets/work-wedding.jpg";
 import heroImageAsset from "@/assets/video-editing.jpg.asset.json";
 import showreelPosterAsset from "@/assets/showreel-poster.png.asset.json";
 import portrait from "@/assets/portrait.jpg.asset.json";
@@ -125,8 +120,6 @@ export type Project = {
   software: string;
 };
 
-const posters = [posterA, posterB, posterC, posterD, posterE];
-
 const DESCRIPTION =
   "";
 
@@ -154,9 +147,6 @@ const seeds: Seed[] = [
   ["Editorial Motion", "", "https://www.instagram.com/reel/DUiWAc7k5eH/"],
   ["Brand Visual", "", "https://www.instagram.com/reel/DTZ4-3aicWL/"],
   ["Social Film", "", "https://www.instagram.com/reel/DS7hpgiE5sn/"],
-  ["", "", "https://www.instagram.com/reels/DUYG0NsjIYE/"],
-  ["Story In Motion", "", "https://www.instagram.com/reel/DS2OBAtDIGm/"],
-  ["Selected Cut", "", "https://www.instagram.com/reel/DP8UL6ZAQuE/"],
 ];
 
 export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => ({
@@ -166,7 +156,7 @@ export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => 
   category,
   reelUrl,
   videoUrl: i === 0 ? portfolio01Video.url : i === 1 ? portfolio02Video.url : i === 2 ? portfolio03Video.url : i === 3 ? portfolio04Video.url : i === 4 ? portfolio05Video.url : i === 5 ? portfolio06Video.url : i === 6 ? portfolio07Video.url : i === 7 ? portfolio08Video.url : i === 8 ? portfolio09Video.url : i === 9 ? portfolio10Video.url : i === 10 ? portfolio11Video.url : i === 11 ? portfolio12Video.url : i === 12 ? portfolio13Video.url : i === 13 ? portfolio14Video.url : i === 14 ? portfolio15Video.url : i === 15 ? portfolio16Video.url : i === 16 ? portfolio17Video.url : i === 17 ? portfolio18Video.url : i === 18 ? portfolio19Video.url : i === 19 ? portfolio20Video.url : i === 20 ? portfolio21Video.url : undefined,
-  poster: i === 0 ? portfolio01Thumb.url : i === 1 ? portfolio02Thumb.url : i === 2 ? portfolio03Thumb.url : i === 3 ? portfolio04Thumb.url : i === 4 ? portfolio05Thumb.url : i === 5 ? portfolio06Thumb.url : i === 6 ? portfolio07Thumb.url : i === 7 ? portfolio08Thumb.url : i === 8 ? portfolio09Thumb.url : i === 9 ? portfolio10Thumb.url : i === 10 ? portfolio11Thumb.url : i === 11 ? portfolio12Thumb.url : i === 12 ? portfolio13Thumb.url : i === 13 ? portfolio14Thumb.url : i === 14 ? portfolio15Thumb.url : i === 15 ? portfolio16Thumb.url : i === 16 ? portfolio17Thumb.url : i === 17 ? portfolio18Thumb.url : i === 18 ? portfolio19Thumb.url : i === 19 ? portfolio20Thumb.url : i === 20 ? portfolio21Thumb.url : posters[i % posters.length]!,
+  poster: i === 0 ? portfolio01Thumb.url : i === 1 ? portfolio02Thumb.url : i === 2 ? portfolio03Thumb.url : i === 3 ? portfolio04Thumb.url : i === 4 ? portfolio05Thumb.url : i === 5 ? portfolio06Thumb.url : i === 6 ? portfolio07Thumb.url : i === 7 ? portfolio08Thumb.url : i === 8 ? portfolio09Thumb.url : i === 9 ? portfolio10Thumb.url : i === 10 ? portfolio11Thumb.url : i === 11 ? portfolio12Thumb.url : i === 12 ? portfolio13Thumb.url : i === 13 ? portfolio14Thumb.url : i === 14 ? portfolio15Thumb.url : i === 15 ? portfolio16Thumb.url : i === 16 ? portfolio17Thumb.url : i === 17 ? portfolio18Thumb.url : i === 18 ? portfolio19Thumb.url : i === 19 ? portfolio20Thumb.url : portfolio21Thumb.url,
   description: DESCRIPTION,
   role: "",
   software: "",
