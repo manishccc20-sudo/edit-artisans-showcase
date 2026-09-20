@@ -39,16 +39,13 @@
   --color-surface: var(--surface);
   --color-hairline: var(--hairline);
   --color-glow: var(--glow);
-  --color-heading-high: var(--heading-high);
-  --color-heading-mid: var(--heading-mid);
-  --color-heading-low: var(--heading-low);
   --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.16 0.008 255);
+  --background: oklch(0.11 0.015 255);
   --foreground: oklch(0.96 0.005 255);
   --surface: oklch(0.16 0.028 255);
   --hairline: oklch(0.8 0.09 250 / 16%);
@@ -58,10 +55,7 @@
   --popover-foreground: oklch(0.96 0.005 255);
   --primary: oklch(0.72 0.15 245);
   --primary-foreground: oklch(0.12 0.02 255);
-  --glow: oklch(0.62 0.11 250);
-  --heading-high: oklch(0.99 0 0);
-  --heading-mid: oklch(0.92 0.006 255);
-  --heading-low: oklch(0.72 0.01 255);
+  --glow: oklch(0.62 0.17 250);
   --secondary: oklch(0.22 0.035 255);
   --secondary-foreground: oklch(0.96 0.005 255);
   --muted: oklch(0.2 0.03 255);
@@ -87,9 +81,9 @@
   body {
     background-color: var(--color-background);
     background-image:
-      radial-gradient(70rem 46rem at 12% -8%, color-mix(in oklab, var(--glow) 14%, transparent), transparent 68%),
-      radial-gradient(62rem 42rem at 96% 34%, color-mix(in oklab, var(--glow) 10%, transparent), transparent 66%),
-      radial-gradient(54rem 36rem at 42% 108%, color-mix(in oklab, var(--foreground) 6%, transparent), transparent 70%);
+      radial-gradient(80rem 50rem at 12% -10%, color-mix(in oklab, var(--glow) 26%, transparent), transparent 65%),
+      radial-gradient(70rem 45rem at 95% 30%, color-mix(in oklab, var(--glow) 18%, transparent), transparent 60%),
+      radial-gradient(60rem 40rem at 40% 110%, color-mix(in oklab, var(--glow) 20%, transparent), transparent 65%);
     background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
@@ -102,9 +96,6 @@
     font-family: var(--font-display);
     font-weight: 800;
     letter-spacing: -0.03em;
-    background-image: linear-gradient(115deg, var(--heading-high), var(--heading-mid) 52%, var(--heading-low));
-    background-clip: text;
-    color: transparent;
   }
 
   ::selection {
@@ -161,22 +152,7 @@
 
 /* Chrome / metallic display type, per reference theme */
 @utility chrome-text {
-  background-image: linear-gradient(115deg, var(--heading-high), var(--heading-mid) 52%, var(--heading-low));
-  background-clip: text;
-  color: transparent;
-}
-
-@utility video-card {
-  border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
-  background: color-mix(in oklab, var(--surface) 22%, transparent);
-  backdrop-filter: blur(6px);
-  transition: border-color 500ms ease, background-color 500ms ease, box-shadow 500ms ease;
-
-  &:hover {
-    border-color: color-mix(in oklab, var(--foreground) 20%, transparent);
-    background: color-mix(in oklab, var(--surface) 48%, transparent);
-    box-shadow: 0 18px 50px -28px color-mix(in oklab, var(--glow) 48%, transparent);
-  }
+  color: var(--color-foreground);
 }
 
 @utility glow-panel {
