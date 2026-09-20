@@ -164,17 +164,6 @@ export function Contact() {
           >
             {contact.email}
           </a>
-          <div className="mt-4">
-            <a
-              href={contact.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              linkedin.com/in/dasari-manish
-              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
-            </a>
-          </div>
         </Reveal>
       </div>
     </section>
