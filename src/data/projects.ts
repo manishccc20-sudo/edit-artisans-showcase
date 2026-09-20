@@ -154,9 +154,6 @@ const seeds: Seed[] = [
   ["Editorial Motion", "", "https://www.instagram.com/reel/DUiWAc7k5eH/"],
   ["Brand Visual", "", "https://www.instagram.com/reel/DTZ4-3aicWL/"],
   ["Social Film", "", "https://www.instagram.com/reel/DS7hpgiE5sn/"],
-  ["", "", "https://www.instagram.com/reels/DUYG0NsjIYE/"],
-  ["Story In Motion", "", "https://www.instagram.com/reel/DS2OBAtDIGm/"],
-  ["Selected Cut", "", "https://www.instagram.com/reel/DP8UL6ZAQuE/"],
 ];
 
 export const projects: Project[] = seeds.map(([title, category, reelUrl], i) => ({
