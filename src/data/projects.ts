@@ -88,7 +88,7 @@ import portfolio21Thumb from "@/assets/portfolio-21-thumb.jpg.asset.json";
 export const contact = {
   email: "dasarimanish983@gmail.com",
   instagram: "https://www.instagram.com/",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/dasari-manish",
 };
 
 export const media = {
