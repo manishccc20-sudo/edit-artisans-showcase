@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { embedUrl, type Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +17,19 @@ export function PortfolioCard({
   size?: "sm" | "md" | "lg";
 }) {
   const [preview, setPreview] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleAudio = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const nextMuted = !isMuted;
+    setIsMuted(nextMuted);
+    if (videoRef.current) {
+      videoRef.current.muted = nextMuted;
+      void videoRef.current.play();
+    }
+  };
 
   return (
     <motion.div
@@ -28,14 +42,17 @@ export function PortfolioCard({
       onHoverStart={() => setPreview(true)}
       onHoverEnd={() => setPreview(false)}
     >
-      <button
-        type="button"
-        data-cursor="View project ↗"
-        onClick={() => onOpen(project)}
-        aria-label={`Open ${project.title}`}
-        className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-      >
-        <div className={cn("relative overflow-hidden rounded-lg", aspect)}>
+      <div className={cn("group relative overflow-hidden rounded-lg", aspect)}>
+        <Button
+          type="button"
+          variant="ghost"
+          data-cursor="View project ↗"
+          onClick={() => onOpen(project)}
+          aria-label={`Open ${project.title}`}
+          className="absolute inset-0 z-10 h-full w-full rounded-lg p-0 focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <span className="sr-only">Open {project.title}</span>
+        </Button>
           <img
             src={project.poster}
             alt={`${project.title}`}
@@ -45,10 +62,11 @@ export function PortfolioCard({
           {preview ? (
             project.videoUrl ? (
               <video
+                ref={videoRef}
                 src={project.videoUrl}
                 autoPlay
                 loop
-                muted
+                muted={isMuted}
                 playsInline
                 className="pointer-events-none absolute inset-0 h-full w-full object-cover"
               />
@@ -62,8 +80,20 @@ export function PortfolioCard({
               />
             )
           ) : null}
-        </div>
-      </button>
+        {preview && project.videoUrl ? (
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            onClick={toggleAudio}
+            aria-label={isMuted ? `Unmute ${project.title}` : `Mute ${project.title}`}
+            aria-pressed={!isMuted}
+            className="absolute right-3 top-3 z-20 rounded-full border border-border bg-background/60 text-foreground backdrop-blur-md hover:bg-background/80"
+          >
+            {isMuted ? <VolumeX aria-hidden="true" /> : <Volume2 aria-hidden="true" />}
+          </Button>
+        ) : null}
+      </div>
     </motion.div>
   );
 }
