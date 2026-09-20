@@ -5,4 +5,4 @@
 - [x] Verify glass styling and preserved interactions on desktop and mobile
 - [x] Remove the custom cursor overlay and blue portfolio hover tint
 - [x] Remove the full-card button's blue hover wash and verify clear video previews
-- [ ] Add prominent LinkedIn links below the email and beside Instagram
+- [x] Add prominent LinkedIn links below the email and beside Instagram
