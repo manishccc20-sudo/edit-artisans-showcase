@@ -4,4 +4,4 @@
 - [x] Apply Apple-style dark frosted glass across navigation, portfolio cards, modal, and controls
 - [x] Verify glass styling and preserved interactions on desktop and mobile
 - [x] Remove the custom cursor overlay and blue portfolio hover tint
-- [ ] Remove the full-card button's blue hover wash and verify clear video previews
+- [x] Remove the full-card button's blue hover wash and verify clear video previews
