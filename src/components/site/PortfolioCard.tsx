@@ -55,15 +55,14 @@ export function PortfolioCard({
           aspect,
         )}
       >
-        <Button
+        <button
           type="button"
-          variant="ghost"
           onClick={() => onOpen(project)}
           aria-label={`Open ${project.title}`}
-          className="absolute inset-1 z-10 h-auto w-auto rounded-xl p-0 focus-visible:ring-2 focus-visible:ring-ring"
+          className="absolute inset-1 z-10 rounded-xl bg-transparent p-0 hover:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <span className="sr-only">Open {project.title}</span>
-        </Button>
+        </button>
           <img
             src={project.poster}
             alt={`${project.title}`}
