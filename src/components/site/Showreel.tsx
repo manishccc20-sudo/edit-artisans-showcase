@@ -37,7 +37,6 @@ export function Showreel() {
               <button
                 type="button"
                 onClick={() => setPlaying(true)}
-                data-cursor="Watch showreel ↗"
                 aria-label="Play showreel"
                 className="group relative block w-full"
               >
