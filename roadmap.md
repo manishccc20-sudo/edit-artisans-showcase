@@ -8,3 +8,4 @@
 - [x] Add prominent LinkedIn links below the email and beside Instagram
 - [x] Replace the Google Drive showreel with the uploaded native video
 - [x] Add a full-screen portfolio video lightbox with back button and Escape-key closing
+- [ ] Verify visible MANISH branding and repair all live video playback on desktop and mobile
