@@ -11,6 +11,7 @@ import posterD from "@/assets/work-product.jpg";
 import posterE from "@/assets/work-wedding.jpg";
 import heroImageAsset from "@/assets/video-editing.jpg.asset.json";
 import showreelPosterAsset from "@/assets/showreel-poster.png.asset.json";
+import showreelVideoAsset from "@/assets/manish-dasari-showreel.mp4.asset.json";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import portfolio01Video from "@/assets/portfolio-01.mp4.asset.json";
 import portfolio02Video from "@/assets/portfolio-02.mp4.asset.json";
@@ -95,8 +96,7 @@ export const media = {
   heroImage: heroImageAsset.url,
   portrait: portrait.url,
   showreelPoster: showreelPosterAsset.url,
-  showreelUrl:
-    "https://drive.google.com/file/d/1HaZ0Hh01bdxE7b_NQlYVvHhRq_Ouo0qZ/preview",
+  showreelUrl: showreelVideoAsset.url,
 };
 
 export const allCategories = [

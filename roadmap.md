@@ -6,3 +6,4 @@
 - [x] Remove the custom cursor overlay and blue portfolio hover tint
 - [x] Remove the full-card button's blue hover wash and verify clear video previews
 - [x] Add prominent LinkedIn links below the email and beside Instagram
+- [x] Replace the Google Drive showreel with the uploaded native video
