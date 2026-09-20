@@ -1,0 +1,3 @@
+- [x] Finish and verify mute/unmute controls for portfolio cards and modal
+- [x] Update the site palette to a rich midnight navy with stronger blue ambient light
+- [x] Verify both changes in the live preview

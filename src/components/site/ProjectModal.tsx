@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Play } from "lucide-react";
+import { Play, Volume2, VolumeX } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { embedUrl, type Project } from "@/data/projects";
 
 export function ProjectModal({
@@ -12,10 +13,22 @@ export function ProjectModal({
 }) {
   
   const [embedFailed, setEmbedFailed] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     setEmbedFailed(false);
+    setIsMuted(true);
   }, [project?.id]);
+
+  const toggleAudio = () => {
+    const nextMuted = !isMuted;
+    setIsMuted(nextMuted);
+    if (videoRef.current) {
+      videoRef.current.muted = nextMuted;
+      void videoRef.current.play();
+    }
+  };
 
   useEffect(() => {
     if (!project) return;
@@ -60,7 +73,7 @@ export function ProjectModal({
             </div>
 
             <div className="mx-auto max-w-md">
-              <div className="overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="relative overflow-hidden rounded-xl border border-border bg-surface">
                 {embedFailed ? (
                   <a
                     href={project.reelUrl}
@@ -82,11 +95,12 @@ export function ProjectModal({
                   </a>
                 ) : project.videoUrl ? (
                   <video
+                    ref={videoRef}
                     key={project.id}
                     src={project.videoUrl}
                     autoPlay
                     loop
-                    muted
+                    muted={isMuted}
                     playsInline
                     controls
                     className="aspect-[9/16] w-full object-cover bg-surface"
@@ -103,6 +117,22 @@ export function ProjectModal({
                     onError={() => setEmbedFailed(true)}
                   />
                 )}
+                {project.videoUrl && !embedFailed ? (
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleAudio();
+                    }}
+                    aria-label={isMuted ? `Unmute ${project.title}` : `Mute ${project.title}`}
+                    aria-pressed={!isMuted}
+                    className="absolute right-3 top-3 z-20 rounded-full border border-border bg-background/60 text-foreground backdrop-blur-md hover:bg-background/80"
+                  >
+                    {isMuted ? <VolumeX aria-hidden="true" /> : <Volume2 aria-hidden="true" />}
+                  </Button>
+                ) : null}
               </div>
             </div>
           </motion.div>
