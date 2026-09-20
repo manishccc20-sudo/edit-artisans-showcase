@@ -35,7 +35,7 @@ export function PortfolioCard({
         aria-label={`Open ${project.title}`}
         className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
       >
-        <div className={cn("relative overflow-hidden", aspect)}>
+        <div className={cn("relative overflow-hidden rounded-lg", aspect)}>
           <img
             src={project.poster}
             alt={`${project.title}`}
