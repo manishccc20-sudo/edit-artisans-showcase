@@ -51,14 +51,13 @@ export function PortfolioCard({
     >
       <div
         className={cn(
-          "glass-panel group relative overflow-hidden rounded-2xl p-1 transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_70px_-28px_var(--glow)]",
+          "glass-panel group relative overflow-hidden rounded-2xl p-1 transition-all duration-500 hover:-translate-y-1 hover:border-foreground/20",
           aspect,
         )}
       >
         <Button
           type="button"
           variant="ghost"
-          data-cursor="View project ↗"
           onClick={() => onOpen(project)}
           aria-label={`Open ${project.title}`}
           className="absolute inset-1 z-10 h-auto w-auto rounded-xl p-0 focus-visible:ring-2 focus-visible:ring-ring"

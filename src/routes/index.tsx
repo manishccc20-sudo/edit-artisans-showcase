@@ -3,7 +3,6 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { FeaturedWork } from "@/components/site/FeaturedWork";
 import { Showreel } from "@/components/site/Showreel";
-import { Cursor } from "@/components/site/Cursor";
 import { About, Contact, Footer, Process, Services } from "@/components/site/Sections";
 
 const title = "Manish — Video Editor | Cinematic Edits & Short-Form Content";
@@ -41,7 +40,6 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <Cursor />
       <Navbar />
       <main>
         <Hero />
