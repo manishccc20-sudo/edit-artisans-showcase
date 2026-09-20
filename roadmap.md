@@ -7,3 +7,4 @@
 - [x] Remove the full-card button's blue hover wash and verify clear video previews
 - [x] Add prominent LinkedIn links below the email and beside Instagram
 - [x] Replace the Google Drive showreel with the uploaded native video
+- [x] Add a full-screen portfolio video lightbox with back button and Escape-key closing

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Play, Volume2, VolumeX } from "lucide-react";
+import { ArrowLeft, Play, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { embedUrl, type Project } from "@/data/projects";
 
@@ -32,6 +32,7 @@ export function ProjectModal({
 
   useEffect(() => {
     if (!project) return;
+    const previousOverflow = document.body.style.overflow;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
@@ -39,7 +40,7 @@ export function ProjectModal({
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [project, onClose]);
 
@@ -47,7 +48,7 @@ export function ProjectModal({
     <AnimatePresence>
       {project ? (
         <motion.div
-          className="fixed inset-0 z-[100] overflow-y-auto bg-background/75 p-4 backdrop-blur-2xl md:p-10"
+          className="fixed inset-0 z-[100] flex min-h-dvh items-center justify-center overflow-hidden bg-background/90 p-4 backdrop-blur-2xl md:p-8"
           role="dialog"
           aria-modal="true"
           aria-label={`${project.title} project`}
@@ -57,23 +58,31 @@ export function ProjectModal({
           transition={{ duration: 0.3 }}
           onClick={onClose}
         >
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            aria-label="Back to portfolio"
+            className="glass-panel absolute left-4 top-4 z-30 rounded-full text-foreground hover:bg-accent md:left-8 md:top-8"
+          >
+            <ArrowLeft aria-hidden="true" />
+          </Button>
+
           <motion.div
             key={project.id}
-            className="mx-auto w-full max-w-6xl"
+            className="flex h-full w-full items-center justify-center"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 12 }}
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mb-6 flex items-start justify-between gap-6">
-              <p className="eyebrow">
-                {project.no} — {project.category}
-              </p>
-            </div>
-
-            <div className="mx-auto max-w-md">
-              <div className="glass-panel relative overflow-hidden rounded-2xl p-1">
+            <div className="flex h-full w-full items-center justify-center pt-14 md:pt-0">
+              <div className="glass-panel relative max-h-[calc(100dvh-6rem)] w-auto max-w-full overflow-hidden rounded-2xl p-1">
                 {embedFailed ? (
                   <a
                     href={project.reelUrl}
@@ -85,7 +94,7 @@ export function ProjectModal({
                       src={project.poster}
                       alt={`${project.title} still frame`}
                       loading="lazy"
-                      className="aspect-[9/16] w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                      className="max-h-[calc(100dvh-6.5rem)] w-auto max-w-full object-contain opacity-80 transition-opacity group-hover:opacity-100"
                     />
                     <span className="absolute inset-0 flex items-center justify-center">
                       <span className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-border bg-background/60 backdrop-blur-md">
@@ -103,14 +112,14 @@ export function ProjectModal({
                     muted={isMuted}
                     playsInline
                     controls
-                    className="aspect-[9/16] w-full object-cover bg-surface"
+                    className="max-h-[calc(100dvh-6.5rem)] w-auto max-w-full object-contain bg-surface"
                   />
                 ) : (
                   <iframe
                     key={project.id}
                     title={`${project.title} — Instagram reel`}
                     src={embedUrl(project.reelUrl)}
-                    className="aspect-[9/16] w-full border-0 bg-surface"
+                    className="aspect-[9/16] max-h-[calc(100dvh-6.5rem)] w-auto max-w-full border-0 bg-surface"
                     loading="lazy"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                     allowFullScreen
