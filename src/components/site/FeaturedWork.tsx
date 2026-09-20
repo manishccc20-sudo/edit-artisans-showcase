@@ -72,7 +72,7 @@ export function FeaturedWork() {
               onClick={() =>
                 setVisibleCount((count) => Math.min(count + LOAD_MORE_COUNT, projects.length))
               }
-              className="h-12 rounded-full border-hairline bg-surface/70 px-7 text-xs uppercase backdrop-blur-xl hover:border-primary/40 hover:bg-accent"
+              className="glass-panel h-12 rounded-full px-7 text-xs uppercase hover:border-primary/40 hover:bg-accent"
             >
               Load More Works
               <ArrowDown aria-hidden="true" />
