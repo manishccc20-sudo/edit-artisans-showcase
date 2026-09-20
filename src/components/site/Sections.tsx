@@ -148,6 +148,14 @@ export function Contact() {
             >
               Instagram <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </a>
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] transition-colors hover:bg-secondary"
+            >
+              LinkedIn <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
 
           <a
@@ -156,6 +164,17 @@ export function Contact() {
           >
             {contact.email}
           </a>
+          <div className="mt-4">
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              linkedin.com/in/dasari-manish
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>
