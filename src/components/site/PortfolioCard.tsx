@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,7 @@ export function PortfolioCard({
   const toggleAudio = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
+    setPreview(true);
     const nextMuted = !isMuted;
     setIsMuted(nextMuted);
     if (videoRef.current) {
@@ -30,6 +31,12 @@ export function PortfolioCard({
       void videoRef.current.play();
     }
   };
+
+  useEffect(() => {
+    if (!preview || !videoRef.current) return;
+    videoRef.current.muted = isMuted;
+    void videoRef.current.play();
+  }, [isMuted, preview]);
 
   return (
     <motion.div
@@ -80,7 +87,7 @@ export function PortfolioCard({
               />
             )
           ) : null}
-        {preview && project.videoUrl ? (
+        {project.videoUrl ? (
           <Button
             type="button"
             variant="ghost"
