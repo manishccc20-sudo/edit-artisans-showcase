@@ -31,7 +31,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "backdrop-blur-xl" : "",
+        scrolled ? "border-b border-hairline bg-background/45 backdrop-blur-2xl" : "",
       )}
     >
       <nav
@@ -68,7 +68,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-foreground md:hidden"
+          className="glass-panel inline-flex h-10 w-10 items-center justify-center rounded-full text-foreground md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -78,7 +78,7 @@ export function Navbar() {
         </button>
       </nav>
 
-      <div id="mobile-menu" hidden={!open} className="border-t border-border bg-background md:hidden">
+      <div id="mobile-menu" hidden={!open} className="glass-panel border-x-0 border-b-0 md:hidden">
         <ul className="flex flex-col px-6 py-6">
           {links.map((l) => (
             <li key={l.href}>

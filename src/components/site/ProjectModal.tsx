@@ -47,7 +47,7 @@ export function ProjectModal({
     <AnimatePresence>
       {project ? (
         <motion.div
-          className="fixed inset-0 z-[100] overflow-y-auto bg-background/95 p-4 backdrop-blur-xl md:p-10"
+          className="fixed inset-0 z-[100] overflow-y-auto bg-background/75 p-4 backdrop-blur-2xl md:p-10"
           role="dialog"
           aria-modal="true"
           aria-label={`${project.title} project`}
@@ -73,7 +73,7 @@ export function ProjectModal({
             </div>
 
             <div className="mx-auto max-w-md">
-              <div className="relative overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="glass-panel relative overflow-hidden rounded-2xl p-1">
                 {embedFailed ? (
                   <a
                     href={project.reelUrl}
@@ -128,7 +128,7 @@ export function ProjectModal({
                     }}
                     aria-label={isMuted ? `Unmute ${project.title}` : `Mute ${project.title}`}
                     aria-pressed={!isMuted}
-                    className="absolute right-3 top-3 z-20 rounded-full border border-border bg-background/60 text-foreground backdrop-blur-md hover:bg-background/80"
+                    className="glass-panel absolute right-3 top-3 z-20 rounded-full text-foreground hover:bg-accent"
                   >
                     {isMuted ? <VolumeX aria-hidden="true" /> : <Volume2 aria-hidden="true" />}
                   </Button>

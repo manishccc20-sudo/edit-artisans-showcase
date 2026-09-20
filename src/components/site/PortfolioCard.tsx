@@ -49,14 +49,19 @@ export function PortfolioCard({
       onHoverStart={() => setPreview(true)}
       onHoverEnd={() => setPreview(false)}
     >
-      <div className={cn("group relative overflow-hidden rounded-lg", aspect)}>
+      <div
+        className={cn(
+          "glass-panel group relative overflow-hidden rounded-2xl p-1 transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_70px_-28px_var(--glow)]",
+          aspect,
+        )}
+      >
         <Button
           type="button"
           variant="ghost"
           data-cursor="View project ↗"
           onClick={() => onOpen(project)}
           aria-label={`Open ${project.title}`}
-          className="absolute inset-0 z-10 h-full w-full rounded-lg p-0 focus-visible:ring-2 focus-visible:ring-ring"
+          className="absolute inset-1 z-10 h-auto w-auto rounded-xl p-0 focus-visible:ring-2 focus-visible:ring-ring"
         >
           <span className="sr-only">Open {project.title}</span>
         </Button>
@@ -64,7 +69,7 @@ export function PortfolioCard({
             src={project.poster}
             alt={`${project.title}`}
             loading="lazy"
-            className="h-full w-full object-cover opacity-70 transition-all duration-[900ms] ease-out group-hover:scale-[1.05] group-hover:opacity-100"
+            className="h-full w-full rounded-xl object-cover opacity-80 transition-all duration-[900ms] ease-out group-hover:scale-[1.025] group-hover:opacity-100"
           />
           {preview ? (
             project.videoUrl ? (
@@ -75,7 +80,7 @@ export function PortfolioCard({
                 loop
                 muted={isMuted}
                 playsInline
-                className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+                className="pointer-events-none absolute inset-1 h-[calc(100%-0.5rem)] w-[calc(100%-0.5rem)] rounded-xl object-cover"
               />
             ) : (
               <iframe
@@ -95,7 +100,7 @@ export function PortfolioCard({
             onClick={toggleAudio}
             aria-label={isMuted ? `Unmute ${project.title}` : `Mute ${project.title}`}
             aria-pressed={!isMuted}
-            className="absolute right-3 top-3 z-20 rounded-full border border-border bg-background/60 text-foreground backdrop-blur-md hover:bg-background/80"
+            className="glass-panel absolute right-3 top-3 z-20 rounded-full text-foreground hover:bg-accent"
           >
             {isMuted ? <VolumeX aria-hidden="true" /> : <Volume2 aria-hidden="true" />}
           </Button>
