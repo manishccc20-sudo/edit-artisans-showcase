@@ -35,7 +35,7 @@ import portfolio19Video from "@/assets/portfolio-19.webm.asset.json";
 import portfolio20Video from "@/assets/portfolio-20.webm.asset.json";
 import portfolio21Video from "@/assets/portfolio-21.webm.asset.json";
 
-import portfolio01Thumb from "@/assets/portfolio-01-thumb.jpg.asset.json";
+import portfolio01Thumb from "@/assets/portfolio-01-thumb-replacement.png.asset.json";
 import portfolio02Thumb from "@/assets/portfolio-02-thumb.jpg.asset.json";
 import portfolio03Thumb from "@/assets/portfolio-03-thumb.jpg.asset.json";
 import portfolio04Thumb from "@/assets/portfolio-04-thumb.jpg.asset.json";
