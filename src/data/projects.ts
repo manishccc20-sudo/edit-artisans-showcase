@@ -90,6 +90,7 @@ export const contact = {
   email: "dasarimanish983@gmail.com",
   instagram: "https://www.instagram.com/manish._1208/",
   linkedin: "https://www.linkedin.com/in/dasari-manish",
+  phone: "+91 8074141885",
 };
 
 export const media = {

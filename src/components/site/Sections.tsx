@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { contact, media, process, services, software } from "@/data/projects";
 
@@ -156,6 +156,12 @@ export function Contact() {
             >
               LinkedIn <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </a>
+            <a
+              href="tel:+918074141885"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] transition-colors hover:bg-secondary"
+            >
+              {contact.phone} <Phone className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
 
           <a
@@ -221,6 +227,14 @@ export function Footer() {
               className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
             >
               LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+918074141885"
+              className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
+            >
+              {contact.phone}
             </a>
           </li>
         </ul>
