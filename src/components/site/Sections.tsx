@@ -160,7 +160,7 @@ export function Contact() {
               href="tel:+918074141885"
               className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] transition-colors hover:bg-secondary"
             >
-              {contact.phone} <Phone className="h-4 w-4" aria-hidden="true" />
+              Contact <Phone className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
 
@@ -234,7 +234,7 @@ export function Footer() {
               href="tel:+918074141885"
               className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground"
             >
-              {contact.phone}
+              Contact
             </a>
           </li>
         </ul>
