@@ -1,6 +1,17 @@
 import { ArrowRight, ArrowUpRight, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { contact, media, process, services, software } from "@/data/projects";
+import afterEffectsLogo from "@/assets/software/after-effects.svg";
+import davinciResolveLogo from "@/assets/software/davinci-resolve.svg";
+import photoshopLogo from "@/assets/software/photoshop.svg";
+import premiereProLogo from "@/assets/software/premiere-pro.svg";
+
+const softwareLogos: Record<(typeof software)[number], string> = {
+  "Premiere Pro": premiereProLogo,
+  "After Effects": afterEffectsLogo,
+  "DaVinci Resolve": davinciResolveLogo,
+  Photoshop: photoshopLogo,
+};
 
 export function Services() {
   return (
@@ -71,13 +82,22 @@ export function About() {
 
           <Reveal delay={0.15}>
             <p className="eyebrow mt-12">Software</p>
-            <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+            <ul className="mt-5 flex flex-wrap gap-4">
               {software.map((s) => (
-                <li
-                  key={s}
-                  className="font-display text-xl font-extrabold uppercase tracking-tight text-foreground/80 md:text-3xl"
-                >
-                  {s}
+                <li key={s}>
+                  <a
+                    href="#work"
+                    aria-label={`${s} — view portfolio projects`}
+                    title={s}
+                    className="glass-panel flex size-16 items-center justify-center rounded-xl transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:size-20"
+                  >
+                    <img
+                      src={softwareLogos[s]}
+                      alt=""
+                      aria-hidden="true"
+                      className="size-9 object-contain md:size-11"
+                    />
+                  </a>
                 </li>
               ))}
             </ul>
