@@ -10,3 +10,5 @@
 - [x] Add a full-screen portfolio video lightbox with back button and Escape-key closing
 - [x] Verify visible MANISH branding and repair all live video playback on desktop and mobile
 - [x] Add the phone number to the Contact section and footer
+
+- [ ] Replace software text labels with linked official app icons
