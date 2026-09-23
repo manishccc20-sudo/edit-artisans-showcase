@@ -4,10 +4,10 @@ import { contact, media, process, services, software } from "@/data/projects";
 import afterEffectsLogo from "@/assets/software/after-effects.svg";
 import davinciResolveLogo from "@/assets/software/davinci-resolve.svg";
 import photoshopLogo from "@/assets/software/photoshop.svg";
-import premiereProLogo from "@/assets/software/premiere-pro.svg";
+import premiereProIcon from "@/assets/software/premiere-pro-icon.png.asset.json";
 
 const softwareLogos: Record<(typeof software)[number], string> = {
-  "Premiere Pro": premiereProLogo,
+  "Premiere Pro": premiereProIcon.url,
   "After Effects": afterEffectsLogo,
   "DaVinci Resolve": davinciResolveLogo,
   Photoshop: photoshopLogo,
