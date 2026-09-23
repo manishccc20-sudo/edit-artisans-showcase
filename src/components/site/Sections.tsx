@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { contact, media, process, services, software } from "@/data/projects";
-import afterEffectsIcon from "@/assets/software/after-effects-icon.png.asset.json";
+import afterEffectsIcon from "@/assets/software/after-effects-icon-v2.png.asset.json";
 import davinciResolveLogo from "@/assets/software/davinci-resolve.svg";
 import photoshopLogo from "@/assets/software/photoshop.svg";
 import premiereProIcon from "@/assets/software/premiere-pro-icon.png.asset.json";
