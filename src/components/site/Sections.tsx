@@ -1,14 +1,14 @@
 import { ArrowRight, ArrowUpRight, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { contact, media, process, services, software } from "@/data/projects";
-import afterEffectsLogo from "@/assets/software/after-effects.svg";
+import afterEffectsIcon from "@/assets/software/after-effects-icon.png.asset.json";
 import davinciResolveLogo from "@/assets/software/davinci-resolve.svg";
 import photoshopLogo from "@/assets/software/photoshop.svg";
 import premiereProIcon from "@/assets/software/premiere-pro-icon.png.asset.json";
 
 const softwareLogos: Record<(typeof software)[number], string> = {
   "Premiere Pro": premiereProIcon.url,
-  "After Effects": afterEffectsLogo,
+  "After Effects": afterEffectsIcon.url,
   "DaVinci Resolve": davinciResolveLogo,
   Photoshop: photoshopLogo,
 };
