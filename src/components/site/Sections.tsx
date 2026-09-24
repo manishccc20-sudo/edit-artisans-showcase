@@ -4,7 +4,7 @@ import { contact, media, process, services, software } from "@/data/projects";
 import afterEffectsIcon from "@/assets/software/after-effects-icon-v2.png.asset.json";
 import davinciResolveIcon from "@/assets/software/davinci-resolve-studio.png.asset.json";
 import photoshopLogo from "@/assets/software/photoshop.svg";
-import premiereProIcon from "@/assets/software/premiere-pro-icon.png.asset.json";
+import premiereProIcon from "@/assets/software/premiere-pro-icon-v2.webp.asset.json";
 
 const softwareLogos: Record<(typeof software)[number], string> = {
   "Premiere Pro": premiereProIcon.url,
