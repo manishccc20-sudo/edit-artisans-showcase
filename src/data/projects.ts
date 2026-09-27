@@ -12,7 +12,7 @@ import posterE from "@/assets/work-wedding.jpg";
 import heroImageAsset from "@/assets/video-editing.jpg.asset.json";
 import showreelPosterAsset from "@/assets/showreel-poster.png.asset.json";
 import showreelVideoAsset from "@/assets/manish-dasari-showreel.webm.asset.json";
-import portrait from "@/assets/portrait.jpg.asset.json";
+import portrait from "@/assets/manish-about-replacement.jpg.asset.json";
 import portfolio01Video from "@/assets/portfolio-01.webm.asset.json";
 import portfolio02Video from "@/assets/portfolio-02.webm.asset.json";
 import portfolio03Video from "@/assets/portfolio-03.webm.asset.json";
