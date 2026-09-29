@@ -161,14 +161,6 @@ export function Contact() {
               Start a project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
-              href={contact.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] transition-colors hover:bg-secondary"
-            >
-              Instagram <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
               href={contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
