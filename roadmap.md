@@ -12,3 +12,5 @@
 - [x] Add the phone number to the Contact section and footer
 
 - [x] Replace software text labels with linked official app icons
+
+- [x] Replace the About portrait photo with the newly uploaded image
