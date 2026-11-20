@@ -14,3 +14,5 @@
 - [x] Replace software text labels with linked official app icons
 
 - [x] Replace the About portrait photo with the newly uploaded image
+
+- [ ] First ad campaign: brief started; waiting on audience, location and budget answers
